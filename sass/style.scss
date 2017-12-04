@@ -1,0 +1,123 @@
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+
+
+	header{
+	background: red;
+	padding: 100px 0;
+	text-align: center;
+	}
+	h1{
+		font-size:100px;
+		color:white;
+		text-transform: uppercase;
+		@media (max-width: 800px){
+			font-size: 50px;
+		}
+	}
+
+@media (max-width: 800px){
+	header{
+		background:yellow;}
+		h1{
+		font-size: 50px;
+		color: black;
+		}
+	}
+
+
+	.rotar{
+		.palito{
+			width: 40px;
+			height: 100px;
+			background:black;
+			transform: rotate(50deg);
+		}
+	}
+
+	.boton{
+		padding: 10px 30px;
+		background:black;
+		color: white;
+		border-radius: 5px;
+		text-decoration: none;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+.boton-rojo{
+	@extend .boton;
+	background-color: red;
+	&:hover{
+		background:darken(red, 10px);
+	}
+}
+
+.boton-verde{
+	@extend .boton;
+	background-color: green;
+}
+.boton-grande{
+	@extend .boton;
+	font-size: 20px;
+	padding: 15px 45px;
+}
+.boton-outline{
+	@extend .boton;
+	background-color: white;
+	color: black;
+	border: black 2px solid;
+}
+@mixin border-radius($radio){
+	-ms-border-radius:$radio;
+	-moz-border-radius:$radio;
+	-o-border-radius:$radio;
+	-webkit-border-radius:$radio;
+	border-radius: $radio;
+}
+
+@mixin hacer_circulos($fondo, $tamano){
+	width: $tamano;
+	height: $tamano;
+	background:$fondo;
+	@include border-radius (50%)
+}
+
+
+.circulo1{
+	@include hacer_circulos(red, 100px);
+}
+.circulo2{
+	@include hacer_circulos(green, 200px);
+}
+
+
+
+.estrella{
+	font-size: 100px;
+	color: white;
+	background:blue;
+	border-radius: 50%;
+	width: 100px;
+	display: flex;
+	height: 100px;
+	justify-content: center;
+	align-items: center;
+	border: 20px red solid;
+}
+.c1{
+	border-radius: 50%;
+	border: 20px red solid;
+	display: inline-block;
+	background:white;
+	padding: 20px;
+}
+
+.x2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: yellow;
+	border-radius: 50%;
+	border: solid 20px black;
+	width: 
+
+}
